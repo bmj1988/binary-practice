@@ -7,7 +7,13 @@ const addZeros = require('../utils/addZeros');
 /******************************************************************************/
 
 const asciiTo8bit = str => {
-  // Your code here
+  let eightbit = "";
+  for (let i = 0; i < str.length; i++) {
+    const baseTen = str.charCodeAt(i);
+    const binary = baseTen.toString(2).padStart(8, '0');
+    eightbit += binary;
+  }
+  return eightbit;
 };
 
 /******************************************************************************/
